@@ -1,24 +1,23 @@
-<script src="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/js/moovie.min.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/SH20RAJ/Sopplayer/mooviejs/css/moovie.min.css">
 
 
-<video id="example1" poster="https://github.com/SH20RAJ/Sopplayer/blob/main/sample.png?raw=true">
-  <source src="https://raw.githubusercontent.com/GuizeiraYT/teste/main/VID-20220921-WA0001.mp4" type="video/mp4">
+    
 
-  <track kind="captions" label="English" srclang="en" src="https://cdn.jsdelivr.net/gh/BMSVieira/moovie.js@main/demo-template/subtitles/en.vtt">  
-  Your browser does not support the video tag.
-</video>
+<!-- Docs styles -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/Plyr/plyr.css" />
 
+<!--Add a Simple HTML5 Video tag-->
+<div id="container">
+  <video controls data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" class="vid1">
+    <!-- Video files -->
+    <source src="https://raw.githubusercontent.com/GuizeiraYT/teste/main/VID-20220921-WA0001.mp4" type="video/mp4" size="576" />
 
+    <!-- Caption files -->
+    <track kind="captions" label="English" srclang="en" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default />
+    <track kind="captions" label="Français" srclang="fr" src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt" />
+
+  </video>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.7/plyr.min.js"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-   video1 = new Moovie({
-      selector: "#example1",
-      config: {
-          controls : {
-              playtime : true,
-              mute : true,
-              volume : true,
-              subtitles : true,
-              config : true,
